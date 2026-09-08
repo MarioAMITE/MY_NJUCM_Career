@@ -1,0 +1,6 @@
+1、110网址测试：指定测试网址的手动测试，文档中包含测试每个网址的测试用例及测试结果。
+2、Chrome&LiteView性能报告：统计Chrome和LiteView浏览器每个网址的打开时间，进行对比分析。
+3、Chrome与LiteView运行时CPU与内存对比：统计Chrome和LiteView浏览器打开网址时的CPU和内存使用情况的对比。
+4、TOP100网站打开速度明细统计：记录Chrome和LiteView浏览器分别打开TOP100网址的打开速度，记录5次有效数据再计算平均值。（Chrome&LiteView性能报告的数据来源这个文档）
+5、LiteViewBaiduStability.py：使用Python的selenium调用webdriver模拟用户访问百度网址，测试浏览器的稳定性。
+6、testLiviOpenTimeNew100和testChromeOpenTimeNew100：使用Python的selenium进行TOP100网址的打开速度测试。

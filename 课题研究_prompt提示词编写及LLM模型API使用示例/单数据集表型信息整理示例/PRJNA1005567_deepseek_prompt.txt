@@ -1,0 +1,68 @@
+
+# DeepSeek Prompt
+# PRJNA: PRJNA1005567
+# Generated at 2025-12-12T15:27:50
+
+Goal:
+From BioProject / GEO / PubMed / SRA metadata, extract key study information and output JSON (no explanation).
+
+Output JSON format:
+{
+  "disease_major": "ICD-11 chapter name (English)",
+  "disease_minor": "specific disease name (English, e.g., COVID-19)",
+  "icd11_code": "ICD-11 code if available, else NA",
+  "sample_source": "sample origin in English (e.g., PBMC, serum, lung tissue)",
+  "grouping_columns": [
+    {
+      "column_name": "metadata column name",
+      "grouping_logic": {"value or regex:pattern": "GroupName(EN)"},
+      "confidence": "High/Medium/Low",
+      "reason": "short reasoning (Chinese allowed)"
+    }
+  ]
+}
+
+Constraints:
+- All output must be in English.
+- disease_major should correspond to an ICD-11 chapter name.
+- Do NOT include 'group' in group names.
+- Timepoints should use dayN format (e.g., day7, day14).
+
+BioProject:
+{
+  "project_accession": "PRJNA1005567",
+  "geo_accession": "GSE240851",
+  "title": "The Transcriptomic Profiling of Blood CD4 and CD8 T-cells in Narcolepsy Type I",
+  "description": "Background Narcolepsy Type I (NT1) is a rare, life-long sleep disorder arising as a consequence of the extensive destruction of orexin-producing hypothalamic neurons. The mechanisms involved in the destruction of orexin neurons are not yet elucidated but the association of narcolepsy with environmental triggers and genetic susceptibility (strong association with the HLA, TCRs and other immunologically-relevant loci) implicates an immuno-pathological process. Several studies in animal models and on human samples have suggested that T-cells are the main pathogenic culprits.Methods RNA sequencing was performed on four CD4 and CD8 T-cell subsets (naive, effector, effector memory and central memory) sorted by flow cytometry from peripheral blood mononuclear cells (PBMCs) of NT1 patients and HLA-matched healthy donors as well as (ageand sex-) matched individuals suffering from other sleep disorders (OSD). The RNAseq analysis was conducted by comparing the transcriptome of NT1 patients to that of healthy donors and other sleep disorder patients (collectively referred to as the non-narcolepsy controls) in order to identify narcolepsy- specific genes and pathways.We determined narcolepsy-specific differentially expressed genes, several of which are involved in tubulin arrangement found in CD4 (TBCB, CCT5, EML4, TPGS1, TPGS2) and CD8 (TTLL7) T cell subsets, which play a role in the immune synapse formation and TCR signaling. Furthermore, we identified genes (GZMB, LTB in CD4 and NLRP3, TRADD, IL6, CXCR1, FOXO3, FOXP3 in CD8) and pathways involved in various aspects of inflammation and inflammatory response. More specifically, the inflammatory profile was identified in the \"naive\" subset of CD4 and CD8 T-cell.We identified NT1-specific differentially expressed genes, providing a cell-type and subset specific catalog describing their functions in T-cells as well as their potential involvement in NT1. Several genes and pathways identified are involved in the formation of the immune synapse and TCR activation as well as inflammation and the inflammatory response.An inflammatory transcriptomic profile was detected in both \"naive\" CD4 and CD8 T-cell subsets suggesting their possible involvement in the development or progression of the narcoleptic process. Overall design: RNA sequencing was performed on four CD4 and CD8 T-cell subsets (naive, effector, effector memory and central memory) sorted by flow cytometry from peripheral blood mononuclear cells (PBMCs) of NT1 patients and HLA-Matched healthy donors as well as (age- and sex-) matched individuals suffering from other sleep disorders (OSD). The RNAseq analysis was conducted by comparing the transcriptome of NT1 patients to that of healthy donors And other sleep disorder patients (collectively referred to as the non-narcolepsy controls) in order to identify Narcolepsy-specific genes and pathways.",
+  "publication_id": "38077397",
+  "organism_name": "Homo sapiens"
+}
+
+PubMed:
+{
+  "38077397": {
+    "pubmed_id": "38077397",
+    "title": "The transcriptomics profiling of blood CD4 and CD8 T-cells in narcolepsy type I.",
+    "abstract": "BACKGROUND: Narcolepsy Type I (NT1) is a rare, life-long sleep disorder arising  as a consequence of the extensive destruction of orexin-producing hypothalamic neurons. The mechanisms involved in the destruction of orexin neurons are not yet elucidated but the association of narcolepsy with environmental triggers and genetic susceptibility (strong association with the HLA, TCRs and other immunologically-relevant loci) implicates an immuno-pathological process. Several studies in animal models and on human samples have suggested that T-cells are the main pathogenic culprits. METHODS: RNA sequencing was performed on four CD4 and CD8 T-cell subsets (naive, effector, effector memory and central memory) sorted by flow cytometry from peripheral blood mononuclear cells (PBMCs) of NT1 patients and HLA-matched healthy donors as well as (age- and sex-) matched individuals suffering from other sleep disorders (OSD). The RNAseq analysis was conducted by comparing the transcriptome of NT1 patients to that of healthy donors and other sleep disorder patients (collectively referred to as the non-narcolepsy controls) in order to identify NT1-specific genes and pathways. RESULTS: We determined NT1-specific differentially expressed genes, several of which are involved in tubulin arrangement found in CD4 (TBCB, CCT5, EML4, TPGS1, TPGS2) and CD8 (TTLL7) T cell subsets, which play a role in the immune synapse formation and TCR signaling. Furthermore, we identified genes (GZMB, LTB in CD4 T-cells and NLRP3, TRADD, IL6, CXCR1, FOXO3, FOXP3 in CD8 T-cells) and pathways involved in various aspects of inflammation and inflammatory response. More specifically, the inflammatory profile was identified in the \"naive\" subset of CD4 and CD8 T-cell. CONCLUSION: We identified NT1-specific differentially expressed genes, providing a cell-type and subset specific catalog describing their functions in T-cells as well as their potential involvement in NT1. Several genes and pathways identified are involved in the formation of the immune synapse and TCR activation as well as inflammation and the inflammatory response. An inflammatory transcriptomic profile was detected in both \"naive\" CD4 and CD8 T-cell subsets suggesting their possible involvement in the development or progression of the narcoleptic process. Zytnicki and Liblau. University of Toulouse, Centre National de la Recherche Scientifique (CNRS), L'Institut National de la Sante et de la Recherche Medicale (INSERM), Universite Paul-Sabatier de Toulouse (UPS), Toulouse, France. Recherche pour l'Agriculture, l'Alimentation et l'Environnement (INRAE), Toulouse, France. University of Toulouse, Centre National de la Recherche Scientifique (CNRS), L'Institut National de la Sante et de la Recherche Medicale (INSERM), Universite Paul-Sabatier de Toulouse (UPS), Toulouse, France. System and College of Health Sciences, VinUniveristy, Hanoi, Vietnam. University of Toulouse, Centre National de la Recherche Scientifique (CNRS), L'Institut National de la Sante et de la Recherche Medicale (INSERM), Universite Paul-Sabatier de Toulouse (UPS), Toulouse, France. University of Toulouse, Centre National de la Recherche Scientifique (CNRS), L'Institut National de la Sante et de la Recherche Medicale (INSERM), Universite Paul-Sabatier de Toulouse (UPS), Toulouse, France. and Kleine-Levin Syndrome, Department of Neurology, Gui-de-Chauliac Hospital, Centre Hospitalier Universitaire (CHU) de Montpellier, Montpellier, France. Montpellier, France. and Kleine-Levin Syndrome, Department of Neurology, Gui-de-Chauliac Hospital, Centre Hospitalier Universitaire (CHU) de Montpellier, Montpellier, France. Montpellier, France. Recherche pour l'Agriculture, l'Alimentation et l'Environnement (INRAE), Toulouse, France. University of Toulouse, Centre National de la Recherche Scientifique (CNRS), L'Institut National de la Sante et de la Recherche Medicale (INSERM), Universite Paul-Sabatier de Toulouse (UPS), Toulouse, France.",
+    "journal": "Frontiers in immunology",
+    "pub_date": "2023",
+    "doi": "10.3389/fimmu.2023.1249405"
+  }
+}
+
+SRA columns preview (deduplicated):
+              Column  UniqueN                                                                                                                                                                                                                                                                                         Examples
+       run_accession      260                                                                                                                                                                                                                   [SRR25643771, SRR25643772, SRR25643773, SRR25643774, SRR25643775, SRR25643776]
+experiment_accession      260                                                                                                                                                                                                                   [SRX21370412, SRX21370411, SRX21370410, SRX21370409, SRX21370408, SRX21370407]
+    experiment_title      260 [GSM7710679: CD8OSD11_Nv; Homo sapiens; RNA-Seq, GSM7710678: CD8OSD11_EM; Homo sapiens; RNA-Seq, GSM7710645: CD8OSD03_Ef; Homo sapiens; RNA-Seq, GSM7710644: CD8OSD03_CM; Homo sapiens; RNA-Seq, GSM7710643: CD8OSD02_Nv; Homo sapiens; RNA-Seq, GSM7710642: CD8OSD02_EM; Homo sapiens; RNA-Seq]
+        library_name      260                                                                                                                                                                                                                         [GSM7710679, GSM7710678, GSM7710645, GSM7710644, GSM7710643, GSM7710642]
+    sample_accession      260                                                                                                                                                                                                                   [SRS18614122, SRS18614120, SRS18614119, SRS18614118, SRS18614116, SRS18614121]
+           biosample      260                                                                                                                                                                                                             [SAMN36992971, SAMN36992972, SAMN36993005, SAMN36993006, SAMN36993007, SAMN36993008]
+         total_spots      260                                                                                                                                                                                                                                     [73542556, 85740222, 69788146, 65142976, 76744609, 82801048]
+          total_size      260                                                                                                                                                                                                                         [2450957602, 2890552152, 2280475264, 2110283128, 2619745587, 2756663111]
+     run_total_bases      260                                                                                                                                                                                                                         [7501340712, 8745502644, 7118390892, 6644583552, 7827950118, 8445706896]
+           run_alias      260                                                                                                                                                                                                       [GSM7710679_r1, GSM7710678_r1, GSM7710645_r1, GSM7710644_r1, GSM7710643_r1, GSM7710642_r1]
+     public_filename      260                                                                                                                                                                                     [SRR25643771.lite, SRR25643772.lite, SRR25643773.lite, SRR25643774.lite, SRR25643775.lite, SRR25643776.lite]
+         public_size      260                                                                                                                                                                                                                         [2012673503, 2342166144, 1890820389, 1767441138, 2099245855, 2267264868]
+         public_date      233                                                                                                                                                                   [2023-08-20 14:21:41, 2023-08-20 14:20:56, 2023-08-20 14:20:23, 2023-08-20 14:21:01, 2023-08-20 14:23:54, 2023-08-20 14:20:38]
+           cell type        2                                                                                                                                                                                                                                                                         [CD8 T-cell, CD4 T-cell]

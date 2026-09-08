@@ -1,0 +1,16 @@
+技术附件：基于 LLM Agent 的大规模转录组表型自动化整理工作流（详见README.md）
+
+项目关联：《基于基因表达特征的感染性疾病亚型分类模型研究》
+
+核心贡献：针对感染性疾病预后需求，构建自动化 Agent 管道，利用多 LLM 接口（DeepSeek/Qwen/ChatGPT）解析异构 SRA/GEO 元数据，完成 500+ 数据集、~70,000 样本、20,000 基因的外周血转录组表型信息结构化提取。
+
+特点：
+异构数据标准化：利用 pysradb + GEOquery 打通 SRA 与 GEO 数据库，克服了公共数据库字段命名混乱的难题。
+
+LLM Agent 结构化提取：通过 Few-shot Prompting（见代码中的 System Prompt）引导 DeepSeek 从非结构化摘要中提取 ICD-11 编码和分组逻辑，准确率远超传统正则匹配。
+
+多模型高可用架构：代码层封装 OpenAI 标准接口，支持故障转移与模型热切换（DeepSeek/Qwen/ChatGPT），确保大规模任务在 API 限流下仍能稳定运行。
+
+跨语言混合编程：利用 Python 的高效 API 调度与 R 在生物信息学领域的深厚生态（Bioconductor），实现了“1+1>2”的工程效率。
+
+Docker/HPC 友好：所有路径参数化，支持相对路径与绝对路径，完美适配实验室集群环境。

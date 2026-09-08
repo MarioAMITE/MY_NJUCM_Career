@@ -1,0 +1,41 @@
+# 内容质量评分权重 (总分40%)
+content_quality_weight = 0.4
+originality_weight = 0.15
+depth_weight = 0.15
+accuracy_weight = 0.1
+
+# 技术性能评分权重 (总分30%)
+technical_performance_weight = 0.3
+loading_speed_weight = 0.1
+security_weight = 0.1
+stability_weight = 0.1
+
+# 用户体验评分权重 (总分20%)
+user_experience_weight = 0.2
+usability_weight = 0.1
+design_weight = 0.1
+
+# 商业价值评分权重 (总分10%)
+business_value_weight = 0.1
+traffic_quality_weight = 0.05
+conversion_rate_weight = 0.05# 内容质量评分权重 (总分40%)
+content_quality_weight = 0.4
+originality_weight = 0.15
+depth_weight = 0.15
+accuracy_weight = 0.1
+
+# 技术性能评分权重 (总分30%)
+technical_performance_weight = 0.3
+loading_speed_weight = 0.1
+security_weight = 0.1
+stability_weight = 0.1
+
+# 用户体验评分权重 (总分20%)
+user_experience_weight = 0.2
+usability_weight = 0.1
+design_weight = 0.1
+
+# 商业价值评分权重 (总分10%)
+business_value_weight = 0.1
+traffic_quality_weight = 0.05
+conversion_rate_weight = 0.05

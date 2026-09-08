@@ -1,0 +1,75 @@
+
+# DeepSeek Prompt
+# PRJNA: PRJNA1004581
+# Generated at 2025-12-16T12:48:00
+
+Goal:
+From BioProject / GEO / PubMed / SRA metadata, extract key study information and output JSON (no explanation).
+
+Output JSON format:
+{
+  "disease_major": "ICD-11 chapter name (English)",
+  "disease_minor": "specific disease name (English, e.g., COVID-19)",
+  "icd11_code": "ICD-11 code if available, else NA",
+  "sample_source": "sample origin in English (e.g., PBMC, serum, lung tissue)",
+  "grouping_columns": [
+    {
+      "column_name": "metadata column name",
+      "grouping_logic": {"value or regex:pattern": "GroupName(EN)"},
+      "confidence": "High/Medium/Low",
+      "reason": "short reasoning (Chinese allowed)"
+    }
+  ]
+}
+
+Constraints:
+- All output must be in English.
+- disease_major should correspond to an ICD-11 chapter name.
+- Do NOT include 'group' in group names.
+- Timepoints should use dayN format (e.g., day7, day14).
+
+BioProject:
+{
+  "project_accession": "PRJNA1004581",
+  "geo_accession": "GSE240656",
+  "title": "Multi-center Korean cohort study based on RNA-sequencing data targeting COPD patients",
+  "description": "To determine gene expression changes that contribute to the development of COPD among smokers using high-throughput RNA sequencing in the peripheral blood of COPD patients. Total RNA sequencing was investigated by prospectively collecting lung function test results and whole blood samples from smokers who visited the outpatient department of respiratory medicine at three hospitals since 2020. This study confirmed gene expression differences in non-coding RNA in COPD patients according to the degree of airflow limitation through RNA-Seq transcriptome analysis. These results may provide valuable predictive resources for future COPD research. Overall design: A transcriptomic epidemiologic study was conducted on a total of 294 patients with mild to severe COPD at three hospitals located in South Korea.",
+  "publication_id": "38844491",
+  "organism_name": "Homo sapiens"
+}
+
+PubMed:
+{
+  "38844491": {
+    "pubmed_id": "38844491",
+    "title": "Multi-center Korean cohort study based on RNA-sequencing data targeting COPD  patients.",
+    "abstract": "In 2023, WHO ranked chronic obstructive pulmonary disease (COPD) as the third  leading cause of death, with 3.23 million fatalities in 2019. The intricate nature of the disease, which is influenced by genetics, environment, and lifestyle, is evident. The effect of air pollution and changes in atmospheric substances because of global warming highlight the need for this research. These environmental shifts are associated with the emergence of various respiratory infections such as COVID-19. RNA sequencing is pivotal in airway diseases, including COPD, as it enables comprehensive transcriptome analysis, biomarker discovery, and uncovers novel pathways. It facilitates personalized medicine by tracking dynamic changes in gene expression in response to various triggers. However, the limited research on East Asian populations may overlook the unique nuances of COPD development and progression. Bridging this gap and using peripheral blood samples for systemic analysis are crucial for comprehensive and globally applicable COPD diagnosis and treatment. Republic of Korea. Republic of Korea. Kangwon National University Hospital, Chuncheon, Republic of Korea. Diseases, Severance Hospital, Yonsei University College of Medicine, Seoul, Republic of Korea. College of Medicine, Asan Medical Center, Seoul, Republic of Korea. and Women's Hospital and Harvard Medical School, Boston, Massachusetts, USA. College of Medicine, Kyung Hee University Hospital at Gangdong, Seoul, Republic of Korea. pjk3318@gmail.com.",
+    "journal": "Scientific data",
+    "pub_date": "2024 Jun 6",
+    "doi": "10.1038/s41597-024-03389-8"
+  }
+}
+
+SRA columns preview (deduplicated):
+               Column  UniqueN                                                                                                                                                                                                                                                                                               Examples
+        run_accession      294                                                                                                                                                                                                                         [SRR25617435, SRR25617436, SRR25617437, SRR25617438, SRR25617439, SRR25617440]
+ experiment_accession      294                                                                                                                                                                                                                         [SRX21344659, SRX21344658, SRX21344657, SRX21344656, SRX21344655, SRX21344654]
+     experiment_title      294 [GSM7707105: D100-KBG-949; Homo sapiens; RNA-Seq, GSM7707104: D099-KCB-644; Homo sapiens; RNA-Seq, GSM7707103: D098-HHJ-528; Homo sapiens; RNA-Seq, GSM7707102: D097-LIY-038; Homo sapiens; RNA-Seq, GSM7707101: D096-PYJ-011; Homo sapiens; RNA-Seq, GSM7707100: D095-YCY-061; Homo sapiens; RNA-Seq]
+         library_name      294                                                                                                                                                                                                                               [GSM7707105, GSM7707104, GSM7707103, GSM7707102, GSM7707101, GSM7707100]
+     sample_accession      294                                                                                                                                                                                                                         [SRS18589789, SRS18589788, SRS18589787, SRS18589791, SRS18589786, SRS18589785]
+            biosample      294                                                                                                                                                                                                                   [SAMN36948300, SAMN36948301, SAMN36948302, SAMN36948303, SAMN36948304, SAMN36948305]
+           instrument        2                                                                                                                                                                                                                                                                 [MGISEQ-2000RS, Illumina NovaSeq 6000]
+instrument_model_desc        2                                                                                                                                                                                                                                                                                     [BGISEQ, ILLUMINA]
+          total_spots      294                                                                                                                                                                                                                                          [64512537, 62732455, 56090462, 84975893, 59639584, 132588328]
+           total_size      294                                                                                                                                                                                                                             [8625483059, 8762363308, 7699952347, 11734674413, 8052582873, 19817479718]
+      run_total_bases      294                                                                                                                                                                                                                         [12902507400, 12546491000, 11218092400, 16995178600, 11927916800, 26517665600]
+            run_alias      294                                                                                                                                                                                                             [GSM7707105_r1, GSM7707104_r1, GSM7707103_r1, GSM7707102_r1, GSM7707101_r1, GSM7707100_r1]
+      public_filename      294                                                                                                                                                                                           [SRR25617435.lite, SRR25617436.lite, SRR25617437.lite, SRR25617438.lite, SRR25617439.lite, SRR25617440.lite]
+          public_size      294                                                                                                                                                                                                                               [4198476457, 4082590768, 3651859584, 5529916035, 3881242376, 8563087658]
+          public_date      274                                                                                                                                                                         [2023-08-16 17:27:18, 2023-08-16 17:25:16, 2023-08-16 17:18:08, 2023-08-16 17:33:26, 2023-08-16 17:17:20, 2023-08-16 18:53:51]
+ public_semantic_name        2                                                                                                                                                                                                                                                                                      [SRA Lite, fastq]
+     public_supertype        2                                                                                                                                                                                                                                                                                [Primary ETL, Original]
+    public_sratoolkit        2                                                                                                                                                                                                                                                                                                 [1, 0]
+      aws_free_egress        2                                                                                                                                                                                                                                                                                      [s3.us-east-1, -]
+      aws_access_type        2                                                                                                                                                                                                                                                                [aws identity, Use Cloud Data Delivery]
+                  sex        2                                                                                                                                                                                                                                                                                         [male, female]
