@@ -1,0 +1,28 @@
+# 后端构建产物
+target/
+
+# 前端依赖与构建产物
+node_modules/
+dist/
+
+# 旧代码备份（被文档内容污染过的废代码）
+_old_backup/
+
+# 毕业论文（不公开上传）
+*毕业论文终稿.docx
+*毕业论文终稿.pdf
+
+# IDE 文件
+.idea/
+*.iml
+.vscode/
+*.classpath
+*.project
+.settings/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>社区医院结算系统</title>
+    <style>
+      @media print {
+        body * {
+          visibility: hidden !important;
+        }
+        .print-receipt,
+        .print-receipt * {
+          visibility: visible !important;
+        }
+        .print-receipt {
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
