@@ -29,3 +29,13 @@ Thumbs.db
 
 # Office 临时文件（~$ 开头的锁文件）
 ~$*
+
+# C# / WinForms 编译产物
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# 无关图片（微信导出的个人图片）
+mmexport*.jpg
